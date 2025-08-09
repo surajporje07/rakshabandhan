@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Raksha Bandhan Sister ❤️</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        text-align: center;
+        background: linear-gradient(135deg, #fff0f5, #ffe4b5);
+        overflow-x: hidden;
+        color: #333;
+    }
+
+    h1 {
+        color: #d62828;
+        margin-top: 30px;
+        font-size: 2rem;
+        animation: glow 2s infinite alternate;
+        padding: 0 10px;
+    }
+
+    @keyframes glow {
+        0% { text-shadow: 0 0 5px #ff4d6d, 0 0 10px #ff758f; }
+        100% { text-shadow: 0 0 15px #ff4d6d, 0 0 30px #ff758f; }
+    }
+
+    .rakhi-img {
+        max-width: 90%;
+        height: auto;
+        margin: 20px 0;
+        animation: float 3s infinite ease-in-out;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    .message {
+        font-size: 1rem;
+        margin: 10px auto;
+        max-width: 90%;
+        line-height: 1.5;
+    }
+
+    /* Surprise Button */
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #ff4d6d;
+        color: white;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 20px;
+        transition: 0.3s;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .btn:hover {
+        background: #d62828;
+    }
+
+    /* Hidden surprise message */
+    .surprise {
+        display: none;
+        margin-top: 20px;
+        font-size: 1.1rem;
+        color: #6a040f;
+        font-weight: bold;
+        animation: fadeIn 1.5s forwards;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Floating emojis */
+    .float {
+        position: absolute;
+        font-size: 1.8rem;
+        animation: floatUp 6s linear infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(100vh); opacity: 1; }
+        100% { transform: translateY(-10vh); opacity: 0; }
+    }
+
+    .footer {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        color: #6a040f;
+        padding-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>💖 Happy Raksha Bandhan 💖</h1>
+
+<!-- Your custom boy-sister Raksha Bandhan image -->
+<img src="raksha.png" alt="Brother and Sister Raksha Bandhan" class="rakhi-img">
+
+<p class="message">
+Dear Sister,<br>
+On this Raksha Bandhan, I just want to tell you that you are my forever friend, my partner in crime, and my biggest supporter.  
+May your life always be filled with joy, success, and endless smiles. 💕
+</p>
+
+<div>
+    <span class="btn" onclick="showSurprise()">💌 Click for Your Surprise</span>
+</div>
+
+<div class="surprise" id="surprise">
+    🎁 My promise to you: I’ll always be there to protect you, support you, and cheer for you.  
+    You are the best sister in the world! ❤️  
+    Love you forever, Your Brother 🫶
+</div>
+
+<div class="footer">From your loving brother ❤️</div>
+
+<script>
+    // Floating emoji generator
+    function createFloating() {
+        const emojiList = ["💖", "🪢", "🎀", "💝", "🌸"];
+        const float = document.createElement("div");
+        float.classList.add("float");
+        float.style.left = Math.random() * 100 + "vw";
+        float.style.animationDuration = (Math.random() * 3 + 4) + "s";
+        float.innerHTML = emojiList[Math.floor(Math.random() * emojiList.length)];
+        document.body.appendChild(float);
+        setTimeout(() => float.remove(), 6000);
+    }
+    setInterval(createFloating, 500);
+
+    // Surprise message reveal
+    function showSurprise() {
+        document.getElementById("surprise").style.display = "block";
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
